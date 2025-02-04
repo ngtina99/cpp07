@@ -1,4 +1,4 @@
-NAME = whatever
+NAME = iter
 
 SRC_DIR = ./src/
 SRC = main.cpp
