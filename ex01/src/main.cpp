@@ -6,13 +6,14 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 01:13:30 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/05 00:47:05 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/09 20:41:54 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/iter.hpp"
+#include <iter.hpp>
 
 void	printJoao(int &c) {
+	(void) c;
 	std::cout << "LET'S GO <3" << std::endl;
 }
 

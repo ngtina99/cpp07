@@ -1,4 +1,4 @@
-NAME = whatever
+NAME = array
 
 SRC_DIR = ./src/
 SRC = main.cpp

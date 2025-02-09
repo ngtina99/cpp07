@@ -6,11 +6,12 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 01:13:30 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/05 00:16:24 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/09 20:40:17 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/whatever.hpp"
+#include <whatever.hpp>
+
 
 int main( void ) {
 	int a = 2;
