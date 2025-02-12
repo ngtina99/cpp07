@@ -13,23 +13,43 @@
 
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
-#include "../src/Array.tpp"
+
+#include <exception>
+#include <iostream>
+
+#define MYRED "\033[1;31m"
+#define MYEOF "\033[0m"
+#define MYBLUE "\033[1;34m]"
+
 
 template <class T>
 class Array {
 
 	private:
 
-		T *array;
+		T		*_array;
+		size_t	_size;	
 
 	public:
-	Array();
-	~Array();
-	Array(unsigned int n);
-	Array(const Array &copy);
-	Array &operator=(const Array &rhs);
 
+		Array();
+		~Array();
+		Array(unsigned int n);
+		Array(const Array &copy);
+		Array	&operator=(const Array &rhs);
+	
+		T		&operator[](const int i) const;	
+		unsigned int	size() const;
+
+		class	IndexLimitException: public std::exception {
+			
+			public:
+
+				const char *what() const throw();
+			
+		};
 };
 
+#include "Array.tpp"
 
 #endif
