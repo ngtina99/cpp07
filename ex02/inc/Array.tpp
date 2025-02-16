@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 00:57:29 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/16 20:46:14 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/16 21:32:33 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,14 @@ Array<T>::~Array() {
 }
 
 template <class T>
-T &Array<T>::operator[](const int i) const{
+T &Array<T>::operator[](const int i) {
+	if (i >= static_cast<int>(this->_size) || i < 0)
+		throw (IndexLimitException());
+	return(this->_array[i]);
+}
+
+template <class T>
+const T &Array<T>::operator[](const int i) const {
 	if (i >= static_cast<int>(this->_size) || i < 0)
 		throw (IndexLimitException());
 	return(this->_array[i]);

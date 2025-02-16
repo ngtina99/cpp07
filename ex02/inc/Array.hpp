@@ -41,7 +41,8 @@ class Array {
 		Array	&operator=(const Array &rhs);
 		~Array();
 	
-		T	&operator[](const int i) const;	
+		T		&operator[](const int i);
+		const T	&operator[](const int i) const;
 		unsigned int	size() const;
 
 		class	IndexLimitException: public std::exception {

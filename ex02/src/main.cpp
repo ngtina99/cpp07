@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 01:13:30 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/16 21:01:02 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/16 21:52:39 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main() {
 	std::cout << "Size of arr1: " << arr1.size() << std::endl;
 
 	std::cout << MYPURPLE << "Test 1 - Constructor with size n: " << MYEOF << std::endl;
-	Array<int> arr2(5);
+	Array<int> arr2(MAX_VAL);
 	std::cout << "Size of arr2: " << arr2.size() << std::endl;
 	for (size_t i = 0; i < arr2.size(); i++) {
 		arr2[i] = rand();
@@ -58,14 +58,41 @@ int main() {
 		std::cout << arr4[i] << " ";
 	}
 	std::cout << std::endl;
+
 	try {
 		std::cout << MYPURPLE << "Test 5 - Index operator: " << MYEOF << std::endl;
-        std::cout << "arr4[4]: " << arr4[4] << std::endl;
-        std::cout << "arr4[5]: " << arr4[5] << std::endl;
+		std::cout << "arr4[4]: " << arr4[4] << std::endl;
+		std::cout << "arr4[5]: " << arr4[5] << std::endl;
 	}
 	catch (const std::exception& e) {
-        std::cout << e.what() << std::endl;
-    }
+		std::cout << e.what() << std::endl;
+	}
+
+	std::cout << MYPURPLE << "Test 6 - Other type of array: " << MYEOF << std::endl;
+	Array<std::string> arr5(4);
+	arr5[0]= "Another";
+	arr5[1]= "type";
+	arr5[2]= "of";
+	arr5[3]= "array";
+
+	for ( size_t i = 0; i < arr5.size(); i++)
+		std::cout << "arr5[" << i << "]: " << arr5[i] << std::endl;
+
+	Array<float> arr6(4);
+	arr6[0]= 0.5;
+	arr6[1]= 34567.5;
+	arr6[2]= 42;
+	arr6[3]= -12;
+
+	for ( size_t i = 0; i < arr6.size(); i++)
+		std::cout << "arr6[" << i << "]: " << arr6[i] << std::endl;
+	
+	
+	// std::cout << MYPURPLE << "Test 7 - Const value: " << MYEOF << std::endl;
+	// const Array<int> constArr(5);
+	// std::cout << "constArr[0]: " << constArr[0] << std::endl;
+	// constArr[1] = 20; //only for reading
+
 	std::cout << MYGREEN "PASSED" MYEOF << std::endl;
 }
 
@@ -121,19 +148,4 @@ int main() {
 //     }
 //     delete [] mirror;//
 //     return 0;
-// }
-
-
-
-
-// int	apra(void);
-// int	given(void);
-
-// int main(int ac, char **av)
-// {
-// 	if (ac == 2 && av[1][0] == 'a')
-// 		apra();
-// 	else
-// 		given();
-// 	return (0);
 // }
