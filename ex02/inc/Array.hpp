@@ -16,11 +16,14 @@
 
 #include <exception>
 #include <iostream>
+#include <cstdlib> // for srand() and rand()
+#include <ctime>   // for time()
 
-#define MYRED "\033[1;31m"
 #define MYEOF "\033[0m"
-#define MYBLUE "\033[1;34m]"
-
+#define MYRED "\033[1;31m"
+#define MYBLUE "\033[1;34m"
+#define MYGREEN "\033[1;32m"
+#define MYPURPLE "\033[1;35m"
 
 template <class T>
 class Array {
@@ -33,12 +36,12 @@ class Array {
 	public:
 
 		Array();
-		~Array();
 		Array(unsigned int n);
 		Array(const Array &copy);
 		Array	&operator=(const Array &rhs);
+		~Array();
 	
-		T		&operator[](const int i) const;	
+		T	&operator[](const int i) const;	
 		unsigned int	size() const;
 
 		class	IndexLimitException: public std::exception {
