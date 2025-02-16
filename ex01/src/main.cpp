@@ -6,31 +6,41 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 01:13:30 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/09 20:41:54 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/16 18:39:20 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iter.hpp>
 
-void	printJoao(int &c) {
-	(void) c;
-	std::cout << "LET'S GO <3" << std::endl;
+template <typename T>
+void	printArrayContent(T &c) {
+	std::cout << "Array content: " << MYBLUE << c << MYEOF << std::endl;
 }
 
 int main( void ) {
 
-	int array[5];
-	size_t arrayLen = 6;
-	
-	iter(array, arrayLen, printJoao);
-	// std::cout << "a = " << a << ", b = " << b << std::endl;
-	// std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-	// std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-	// std::string c = "chaine1";
-	// std::string d = "chaine2";
-	// ::swap(c, d);
-	// std::cout << "c = " << c << ", d = " << d << std::endl;
-	// std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-	// std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
-	// return 0;
+	int arrayInt[5] = {1, 2, 3, 4, 5};
+	float arrayFloat[5] = {1.1, std::numeric_limits<float>::infinity(), 2.2, 4.3, 6.0};
+	double arrayDouble[5] = {3, std::numeric_limits<double>::infinity(), 99999.98, 42, std::numeric_limits<double>::lowest()};
+	char arrayChar[5] = {'C', 'H', 'A', 'R', 'S'};
+	std::string arrayString[5] = {"It's", "an", "array", "of", "strings"};
+
+
+	size_t arrayIntLen = sizeof(arrayInt) / sizeof(arrayInt[0]);
+	size_t arrayFloatLen = sizeof(arrayFloat) / sizeof(arrayFloat[0]);
+	size_t arrayDoubleLen = sizeof(arrayDouble) / sizeof(arrayDouble[0]);
+	size_t arrayCharLen = sizeof(arrayChar) / sizeof(arrayChar[0]);
+	size_t arrayStringLen = sizeof(arrayString) / sizeof(arrayString[0]);
+
+	std::cout << MYPURPLE << "*test with an INTEGER array*" << MYEOF << std::endl;
+	iter(arrayInt, arrayIntLen, printArrayContent);
+	std::cout << MYPURPLE << "*test with a FLOAT array*" << MYEOF << std::endl;
+	iter(arrayFloat, arrayFloatLen, printArrayContent);
+	std::cout << MYPURPLE << "*test with a DOUBLE array*" << MYEOF << std::endl;
+	iter(arrayDouble, arrayDoubleLen, printArrayContent);
+	std::cout << MYPURPLE << "*test with a CHAR array*" << MYEOF << std::endl;
+	iter(arrayChar, arrayCharLen, printArrayContent);
+	std::cout << MYPURPLE << "*test with a STRING array*" << MYEOF << std::endl;
+	iter(arrayString, arrayStringLen, printArrayContent);
+
 }
