@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 00:57:29 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/16 21:32:33 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 20:31:54 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "Array.hpp"
 
 template <class T>
-Array<T>::Array() : _array(new T[0]), _size(0) {
+Array<T>::Array() : _array(NULL), _size(0) {
 }
 
 template <class T>
