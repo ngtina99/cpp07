@@ -25,7 +25,6 @@ int main( void ) {
 	char arrayChar[5] = {'C', 'H', 'A', 'R', 'S'};
 	std::string arrayString[5] = {"It's", "an", "array", "of", "strings"};
 
-
 	size_t arrayIntLen = sizeof(arrayInt) / sizeof(arrayInt[0]);
 	size_t arrayFloatLen = sizeof(arrayFloat) / sizeof(arrayFloat[0]);
 	size_t arrayDoubleLen = sizeof(arrayDouble) / sizeof(arrayDouble[0]);
