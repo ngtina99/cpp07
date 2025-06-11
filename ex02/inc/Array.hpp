@@ -16,8 +16,8 @@
 
 #include <exception>
 #include <iostream>
-#include <cstdlib> // for srand() and rand()
-#include <ctime>   // for time()
+#include <cstdlib>
+#include <ctime>
 
 #define MYEOF "\033[0m"
 #define MYRED "\033[1;31m"

@@ -61,8 +61,8 @@ int main() {
 
 	try {
 		std::cout << MYPURPLE << "Test 5 - Index operator: " << MYEOF << std::endl;
-		std::cout << "arr4[4]: " << arr4[4] << std::endl;
-		std::cout << "arr4[5]: " << arr4[5] << std::endl;
+		std::cout << "arr4[0]: " << arr4[0] << std::endl;
+		std::cout << "arr4[]: " << arr4[-1] << std::endl;
 	}
 	catch (const std::exception& e) {
 		std::cout << e.what() << std::endl;

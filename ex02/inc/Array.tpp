@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.tpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 00:57:29 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/06/07 21:19:40 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/02/17 20:31:54 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ unsigned int	Array<T>::size() const {
 
 template <class T>
 const char *Array<T>::IndexLimitException::what() const throw() {
-	return(MYRED "Error: Index out of bonds" MYEOF);
+	return(MYRED "Error: Index out of bounds" MYEOF);
 }
 
 #endif
