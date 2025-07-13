@@ -6,12 +6,12 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 01:13:30 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/16 21:52:39 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/06/09 01:19:08 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <Array.hpp>
-#define MAX_VAL 10
+#define MAX_VAL 0
 
 int main() {
 
