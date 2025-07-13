@@ -6,7 +6,7 @@
 /*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 00:19:28 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/16 18:30:04 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2025/07/13 17:28:15 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,17 @@ void	iter(T *arrayAddress, size_t arrayLen, void(*arrayFunction)(T &)) {
 		arrayFunction(arrayAddress[i]);
 		i++;
 	}
+}
+
+template <typename T>
+void iter(T *arrayAddress, size_t arrayLen, void (*arrayFunction)(T const &)) {
+
+    size_t i = 0;
+
+    while (i < arrayLen) {
+        arrayFunction(arrayAddress[i]);
+        i++;
+    }
 }
 
 #endif

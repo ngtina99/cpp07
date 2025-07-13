@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 01:13:30 by ngtina1999        #+#    #+#             */
-/*   Updated: 2025/02/17 20:29:35 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2025/07/13 17:29:47 by ngtina1999       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iter.hpp>
 
 template <typename T>
-void	printArrayContent(T &c) {
+void	printArrayContent(T const &c) {
 	std::cout << "Array content: " << MYBLUE << c << MYEOF << std::endl;
 }
 
